@@ -1,32 +1,32 @@
 {
   "name": "quiz-app-test",
-  "version": "1.0.0",
-  "description": "There are two types of users -",
-  "main": "src/server/index.js",
-  "scripts": {
-    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-    "server": "nodemon src/server/index.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/divi09112/quiz-app-test.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/divi09112/quiz-app-test/issues"
-  },
-  "homepage": "https://github.com/divi09112/quiz-app-test#readme",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
-    "babel": "^6.23.0",
     "express": "^4.16.4",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
+    "react-dom": "^16.8.2",
+    "react-scripts": "2.1.5"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run start\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "webpack": "^4.29.5",
-    "webpack-dev-server": "^3.1.14"
+    "concurrently": "^4.1.0"
   }
 }
