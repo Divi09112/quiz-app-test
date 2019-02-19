@@ -4,6 +4,9 @@
   "description": "There are two types of users -",
   "main": "src/server/index.js",
   "scripts": {
+    "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
+    "server": "nodemon src/server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -14,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/divi09112/quiz-app-test/issues"
   },
-  "homepage": "https://github.com/divi09112/quiz-app-test#readme"
+  "homepage": "https://github.com/divi09112/quiz-app-test#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "webpack": "^4.29.5",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
