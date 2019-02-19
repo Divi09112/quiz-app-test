@@ -16,8 +16,7 @@ class App extends Component {
     const response = await fetch('/abc', {
 	accept: 'application/json', mode: 'cors',
   });
-      console.log(response);
-    return response;
+    return response.json();
   }
 
   render() {
